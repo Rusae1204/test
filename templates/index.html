@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <style>
+        .section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detection</h1>
+
+    <button id="realTimeButton">Real-time Emotion Detection</button>
+    <button id="uploadButton">Upload Image for Emotion Detection</button>
+
+    <div id="realTimeSection" class="section">
+        <h2>Real-time Emotion Detection</h2>
+        <video id="video" width="640" height="480" autoplay></video>
+        <button id="capture">Capture & Analyze</button>
+        <p id="realtime-emotion"></p>
+    </div>
+
+    <div id="uploadSection" class="section">
+        <h2>Upload Image for Emotion Detection</h2>
+        <input type="file" id="upload" accept="image/*">
+        <button id="upload-analyze">Analyze Uploaded Image</button>
+        <p id="upload-emotion"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
